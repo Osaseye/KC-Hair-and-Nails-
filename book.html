@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Hair & Nails Salon - Booking</title>
+    <link rel="icon" type="image/png" href="brand.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        .booking-form {
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .booking-form h2 {
+            font-family: 'Imperial Script', cursive;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            background-color: pink;
+            border: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: black;
+            color: pink;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+            body {
+                height: auto;
+                display: block;
+                padding: 20px;
+            }
+            .booking-form {
+                margin-top: 80px;
+                margin-left: -20px;
+                padding: 15px;
+                width: 100%;
+            }
+            .booking-form h2 {
+                font-size: 32px;
+                padding-bottom: 35px;
+            }
+            input, select, textarea {
+                padding: 10px;
+                font-size: 14px;
+                margin-left: -5px;
+            }
+            button {
+                margin-top: 25px;
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script>
+        function toggleCustomService() {
+            var serviceDropdown = document.getElementById("service");
+            var customServiceInput = document.getElementById("customService");
+
+            if (serviceDropdown.value === "custom") {
+                customServiceInput.style.display = "block";
+                customServiceInput.required = true;
+            } else {
+                customServiceInput.style.display = "none";
+                customServiceInput.required = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form class="booking-form" id="bookingForm" action="https://formsubmit.co/kchairandnails8@gmail.com" method="POST">
+        <h2>Book an Appointment</h2>
+        <input type="hidden" name="_next"  value="thank-you.html">
+        <input type="hidden" name="_captcha" value="false">  <!-- Disable CAPTCHA to prevent extra verification steps -->
+        
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Appointment Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required onchange="toggleCustomService()">
+                <option value="">Choose a service...</option>
+                <option value="manicure">Manicure</option>
+                <option value="pedicure">Pedicure</option>
+                <option value="hair_color">Hair Coloring</option>
+                <option value="wig_ventilation">Wig Ventilation</option>
+                <option value="braids">Braids</option>
+                <option value="gel_nails">Gel Nails</option>
+                <option value="hair_making">Hair Making</option>
+                <option value="custom">Other (Specify Below)</option>
+            </select>
+        </div>
+    
+        <div class="form-group" id="customService" style="display: none;">
+            <label for="custom_service">Specify Your Service</label>
+            <input type="text" id="custom_service" name="custom_service">
+        </div>
+    
+        <div class="form-group">
+            <label for="message">Additional Comments</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+    
+        <button type="submit">Book Appointment</button>
+    </form>
+    
+</body>
+</html>

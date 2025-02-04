@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KC Hair & Nails offers premium hair and nail care services. Book your appointment today for a luxurious beauty experience!">
+    <meta name="keywords" content="hair, nails, beauty, salon, KC Hair & Nails">
+    <meta property="og:title" content="KC Hair & Nails">
+    <meta property="og:description" content="Experience luxury beauty treatments for your hair and nails at KC Hair & Nails.">
+    <meta property="og:image" content="https://yourwebsite.com/images/brand.jpg">
+    <title>KC Hair and Nails</title>
+    <link rel="icon" type="image/png" href="brand.jpg">
+    <link rel="stylesheet" href="KC.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="#">KC <span>Hair & Nails</span>.</a>
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Home</a></li>
+            <li><a class="title" href="#about">About</a></li>
+            <li><a class="title" href="#services">Services</a></li>
+            <li><a class="title" href="#testimonials">Gallery</a></li>
+            <li><a class="title" href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="toggle icon-menu"><i class="fas fa-bars"></i></div>
+        <div class="toggle icon-close"><i class="fas fa-times"></i></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="brand.jpg"
+              alt="A Nail tech"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title"> Welcome to KC Hair & Nails! </h2>
+            <p>
+                Experience luxury beauty treatments for your hair and nails. Whether you're looking for a stunning makeover or simple self-care, we’ve got you covered. Explore our services and let us pamper you!
+                
+                Your beauty, our passion! 
+            </p>
+            <a class="button" href="book.html">Book Now</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="giorgio-trovato-gb6gtiTZKB8-unsplash.jpg"
+              alt="About Me"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">About Us</h2>
+            <p>
+                Welcome to KC Hair & Nails, your one-stop destination for premium hair and nail care. We are dedicated to providing top-notch beauty services that enhance your confidence and style. We brings passion and expertise to every treatment, ensuring you receive the best care possible. Whether you're looking for a fresh new hairstyle, a flawless manicure, or a relaxing beauty experience, we are here to make your vision a reality
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Services</h2>
+            <p class="subtitle">
+                At <strong>KC Hair and Nails</strong>, we specialize in a variety of beauty treatments designed to make you look and feel your best. Our services include expert gel nails for long-lasting, beautiful manicures, professional hair making to create the perfect style for any occasion, and meticulous wig ventilation to give you a flawless, natural look. Each service is provided with care and precision by our skilled team, ensuring a luxurious experience every time you visit. Let us help you shine!
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon8"><img src="icons8-woman's-hair-48.png" alt="Hair"></i>
+              <h3 class="title">Hair Making</h3>
+              <p>
+                From braids to weaves and natural hair styling, we create stunning hairstyles that enhance your beauty. Our experts ensure healthy and well-maintained hair with top-quality products.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon8"><img src="icons8-nails-48.png" alt="nails"/></i>
+              <h3 class="title">Gel Nails</h3>
+              <p>
+                Get long-lasting, glossy, and durable nails with our professional gel nail services. We offer a variety of colors and designs to give your nails a flawless and stylish look.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon8"><img src="icons8-hair-100.png" alt="Wig"></i>
+              <h3 class="title">Wig Ventilation</h3>
+              <p>
+                Elevate your style with our custom-made lace wigs, closures, and frontals! Using high-quality human hair, we hand-tie each strand for a natural, seamless look. Perfect for protective styling or glamorous transformations. Let us create your dream hair!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title" style="color: white;">Gallery</h2>
+          </header>
+          <div class="slider-container">
+            <div class="slider" id="slider">
+              <img id="slide-image" src="images/img-3.jpg" alt="Placeholder Image">
+              <p id="slide-text" class="s-text">
+                <strong>Chic Leopard Print & Gold Accents</strong><br>
+                Turn heads with this stunning nude and leopard print nail design. Featuring elegant gold accents and delicate embellishments, this look is perfect for anyone wanting a bold yet sophisticated manicure! ✨💅
+              </p>
+            </div>
+            <button class="prev-btn" onclick="prevSlide()">&#9665;</button>
+            <button class="next-btn" onclick="nextSlide()">&#9655;</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Book an Appointment!</h2>
+            <p>
+              Contact us! Get in touch with KC hair & nails, Click the button below to book an appointment
+            </p>
+            <a
+             href="book.html"
+              class="button"
+              >
+              <i class="fas fa-calendar-plus"></i>Book Now</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="fa-solid fa-phone"></i> <a class="phone" href="tel:+4374106792">+4374106792</a></li>
+              <li><i class="fa-solid fa-location-dot"></i><a class="phone" href="https://www.google.com/maps?q=42.9849,-81.2453">London Ontario</a></li>
+              <li><i class="fa-regular fa-envelope"></i><a class="phone" href="mailto:kchairandnails8@gmail.com"></a>kchairandnails8@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+    </main>
+
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">KC<span>Hair & Nails</span>.</a>
+          <p>©2025 Crowndevs.</p>
+          <p>All right reserved</p>
+        </div>
+
+        <div class="social grid">
+          <a href="https://www.instagram.com/kc_hairndnails_?igsh=ZW5wbzE0Y3l4bTRw">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@kc_hairndnails_">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="tel:+4374106792">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="KC.js"></script>
+  </body>
+</html>
