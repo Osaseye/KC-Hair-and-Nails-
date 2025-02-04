@@ -97,23 +97,23 @@ function debounce(func, wait) {
 window.addEventListener('scroll', debounce(backToTop, 100));
 const slides = [
   {
-    img: "images/img-3.jpg",
+    img: "img-3.jpg",
     text: "<strong>Chic Leopard Print & Gold Accents</strong><br>Turn heads with this stunning nude and leopard print nail design. Featuring elegant gold accents and delicate embellishments, this look is perfect for anyone wanting a bold yet sophisticated manicure! ✨💅"
   },
   { 
-    img: "images/img-4.jpg", 
+    img: "img-4.jpg", 
     text: "<strong>Elegant Red French Tips with a Festive Twist</strong><br>This stunning nail design features a classic nude base with bold red French tips, adding a touch of sophistication. The accent nails are adorned with delicate ribbon-style designs, perfect for a festive or chic everyday look. Ideal for those who love a stylish yet classy manicure! 💅✨" 
   },
   { 
-    img: "images/img-6.jpg",
+    img: "img-6.jpg",
     text: "<strong>Stylish Brown Knotless Braids 🌟</strong><br>Add a bold yet elegant touch to your look with our neatly parted brown knotless braids. Designed for comfort and versatility, this lightweight protective style is perfect for everyday wear or special occasions. Elevate your beauty with a flawless finish book your appointment today! 💁🏾‍♀️✨" 
   },
   {
-    img: "images/img-7.jpg",
+    img: "img-7.jpg",
     text: "<strong>Elegant Abstract Nail Art 💅✨</strong><br>Upgrade your nail game with this stunning abstract design featuring soft nude and metallic accents. Perfect for a classy, modern look that complements any outfit. Whether for a special occasion or everyday glam, our expert nail artists will bring your vision to life. Book your nail appointment today! 💖🌸" 
   },
   { 
-    img: "images/img-8.jpg",
+    img: "img-8.jpg",
     text: "<strong>Floral Elegance with a Modern Twist 🌸✨</strong>Show off your unique style with our chic floral nail art and sleek French tips 💅! Whether you're seeking bold creativity or timeless elegance, we deliver picture-perfect results. Your hands deserve this level of beauty and care! 🌟" 
   }
 ];
