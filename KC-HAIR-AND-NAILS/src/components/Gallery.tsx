@@ -24,7 +24,7 @@ const defaultGalleryImages: GalleryImage[] = [
 ]
 
 export default function Gallery({ images = defaultGalleryImages }: GalleryProps) {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [, setActiveIndex] = useState(0)
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
   const isDragging = useRef(false)
   const dragStartX = useRef(0)
@@ -160,52 +160,37 @@ export default function Gallery({ images = defaultGalleryImages }: GalleryProps)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slideCount])
 
-  const nextIndex = Math.min(activeIndex + 1, slideCount - 1)
-  const prevIndex = Math.max(activeIndex - 1, 0)
-
-  // Computes the 3D "wrapped around a cylinder" tilt for each slide,
-  // based on how far it is from the active/center slide.
- 
-
-
-
- return (
-  <section
-    id="gallery"
-    className="bg-[var(--color-background)] py-24 text-[var(--color-primary)]"
-  >
-    <div className="mx-auto max-w-7xl px-6 md:px-8">
-      <SectionTitle
-        eyebrow="Gallery"
-        title="Moments of Beauty"
-        subtitle="A showcase of our latest hair and nail transformations."
-      />
-
-  <div className="arc-gallery">
-  <div
-    ref={scrollContainerRef}
-    onScroll={handleScroll}
-    onPointerDown={handlePointerDown}
-    onPointerMove={handlePointerMove}
-    onPointerUp={endDrag}
-    onPointerCancel={endDrag}
-    onPointerLeave={endDrag}
-    className="arc-gallery-track no-scrollbar"
-  >
-    {images.map((image) => (
-      <div
-        key={image.alt}
-        className="arc-gallery-slide"
-      >
-        <img
-          src={image.src}
-          alt={image.alt}
-          draggable={false}
+  return (
+    <section
+      id="gallery"
+      className="bg-[var(--color-background)] py-24 text-[var(--color-primary)]"
+    >
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
+        <SectionTitle
+          eyebrow="Gallery"
+          title="Moments of Beauty"
+          subtitle="A showcase of our latest hair and nail transformations."
         />
+
+        <div className="arc-gallery">
+          <div
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
+            onPointerLeave={endDrag}
+            className="arc-gallery-track no-scrollbar"
+          >
+            {images.map((image) => (
+              <div key={image.alt} className="arc-gallery-slide">
+                <img src={image.src} alt={image.alt} draggable={false} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-    </div>
-  </section>
-)}
+    </section>
+  )
+}
