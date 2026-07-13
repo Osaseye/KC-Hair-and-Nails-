@@ -1,14 +1,29 @@
 import { motion } from 'framer-motion'
 import Button from './Button'
+import { useEffect, useState } from 'react'
 
 export default function Hero() {
   const heroImage = new URL('../assets/hero.png', import.meta.url).href
+  // place the attached mobile image at /public/mobile-hero.jpg
+  const mobileHero = '/mobile-hero.png'
+  const [bg, setBg] = useState<string>(heroImage)
+
+  useEffect(() => {
+    function update() {
+      const small = window.matchMedia('(max-width: 768px)').matches
+      setBg(small ? mobileHero : heroImage)
+    }
+
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [heroImage])
 
   return (
     <section
       id="home"
       className="relative min-h-[100vh] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="absolute inset-0 bg-black/25" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,113,184,0.18),_transparent_35%),linear-gradient(180deg,_rgba(0,0,0,0.55),_rgba(0,0,0,0.9))]" />

@@ -23,8 +23,7 @@ export default function Header() {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed top-0 left-0 z-50 w-full bg-transparent px-6 py-4 md:px-8"
-    >
+className="absolute top-0 left-0 z-50 w-full bg-transparent px-6 py-4 md:px-8"    >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         <a href="/" className="flex items-center gap-3">
           <img
